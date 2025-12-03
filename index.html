@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Nom – Création de sites internet sur mesure</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --dark: #111827;
+            --light: #f9fafb;
+            --gray: #6b7280;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height:1.6; color:#333; background:#fff; }
+        a { text-decoration:none; color:inherit; }
+
+        /* Header & Hero */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 180px 20px 100px;
+        }
+        header h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        header p { font-size: 1.4rem; max-width: 700px; margin: 0 auto 30px; }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background:#4f46e5; transform:scale(1.05); }
+
+        /* Navigation */
+        nav {
+            background: var(--dark);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 40px;
+        }
+        nav a {
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--primary); }
+
+        /* Sections */
+        section { padding: 100px 20px; text-align:center; }
+        h2 { font-size: 2.8rem; margin-bottom: 50px; color: var(--dark); }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .service-card:hover { transform: translateY(-15px); }
+        .service-card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .project {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+        .project:hover { transform: scale(1.03); }
+        .project img { width: 100%; height: 250px; object-fit: cover; }
+        .project-info { padding: 20px; background: white; }
+        .project-info h3 { margin-bottom: 10px; }
+
+        /* Tarifs */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .price-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border: 3px solid transparent;
+        }
+        .price-card.popular {
+            border-color: var(--primary);
+            transform: scale(1.08);
+        }
+        .price { font-size: 3rem; font-weight: bold; color: var(--primary); margin: 20px 0; }
+
+        /* Contact */
+        #contact { background: var(--dark); color: white; }
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+        }
+        input, textarea {
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+        }
+        textarea { min-height: 150px; resize: vertical; }
+
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="accueil">
+        <h1>Je crée votre site internet professionnel & sur mesure</h1>
+        <p>Site vitrine, boutique en ligne, blog, portfolio… je réalise le site qui correspond parfaitement à votre activité.</p>
+        <a href="#contact" class="btn">Demander un devis gratuit</a>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <h2>Mes services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Site vitrine</h3>
+                    <p>Présentez votre entreprise, association ou activité avec un design moderne et responsive.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Boutique en ligne</h3>
+                    <p>Vendez vos produits 24h/24 avec un e-commerce sécurisé et facile à gérer.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>100 % Responsive</h3>
+                    <p>Tous mes sites s’adaptent parfaitement aux mobiles, tablettes et ordinateurs.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search-dollar"></i>
+                    <h3>Référencement SEO</h3>
+                    <p>Votre site optimisé pour être trouvé facilement sur Google.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sécurisé & rapide</h3>
+                    <p>Certificat SSL, sauvegardes, performances au top.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Maintenance incluse</h3>
+                    <p>Mises à jour, support technique et évolutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Quelques réalisations</h2>
+            <div class="portfolio-grid">
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1547651996427784-0e0f2a5e2d3b?w=800" alt="Restaurant">
+                    <div class="project-info">
+                        <h3>Le Bistrot Gourmand</h3>
+                        <p>Site vitrine + réservation en ligne</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1556742111-a301076d5d3d?w=800" alt="Boutique mode">
+                    <div class="project-info">
+                        <h3>Boutique Mode Paris</h3>
+                        <p>E-commerce 300+ produits</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1519389951296-4c7e88f8a0e7?w=800" alt="Portfolio photographe">
+                    <div class="project-info">
+                        <h3>Studio Photo Créatif</h3>
+                        <p>Portfolio full-screen + galerie</p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top:50px;">Et bien d’autres… Contactez-moi pour voir plus d’exemples !</p>
+        </div>
+    </section>
+
+    <section id="tarifs">
+        <div class="container">
+            <h2>Tarifs transparents</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Essentiel</h3>
+                    <div class="price">À partir de 690€</div>
+                    <ul style="text-align:left;max-width:250px;margin:20px auto;">
+                        <li>5 pages max</li>
+                        <li>Design responsive</li>
+                        <li>SEO de base</li>
+                        <li>1 mois de support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Choisir</a>
+                </div>
+                <div class="price-card popular">
+                    <h3>Pro – Le plus choisi</h3>
+                    <div class="price">À partir de 1290€</div>
+                    <ul style="text-align:left;max-width:250px;margin:20px auto;">
+                        <li>Jusqu’à 15 pages</li>
+                        <li>Design sur mesure</li>
+                        <li>SEO avancé</li>
+                        <li>Boutique possible</li>
+                        <li>3 mois de support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Choisir</a>
+                </div>
+                <div class="price-card">
+                    <h3>E-commerce</h3>
+                    <div class="price">À partir de 1990€</div>
+                    <ul style="text-align:left;max-width:250px;margin:20px auto;">
+                        <li>Panier + paiement en ligne</li>
+                        <li>Gestion des stocks</li>
+                        <li>SEO + Google Shopping</li>
+                        <li>6 mois de support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Choisir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Me contacter</h2>
+            <p style="font-size:1.3rem;margin-bottom:40px;">Devis gratuit sous 24 h – réponse garantie</p>
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="28799194-cf5c-4c94-8369-1f95017cbce3">
+                <input type="hidden" name="redirect" value="merci.html">
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+                <label for="name">Nom complet</label>
+                <input type="text" name="name" id="name" placeholder="Ex: Baptiste Duval" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Ex: bap10official@gmail.com" required>
+
+                <label for="subject">Sujet</label>
+                <input type="text" name="subject" id="subject" placeholder="Ex: Création site vitrine" required>
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="6" placeholder="Bonjour, je voudrais…" required></textarea>
+
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Votre Nom – Tous droits réservés<br>
+        Auto-entrepreneur • SIRET 123 456 789 00012
+    </footer>
+
+</body>
+</html>
